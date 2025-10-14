@@ -1,0 +1,191 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #333;
+     background: linear-gradient(135deg, lightcyan, #e0f7fa);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ===== HEADER LOGO ===== */
+header {
+    position: static;
+    padding: 1rem;
+}
+
+.logo {
+  width: 180px;          /* Adjust this value to suit your layout */
+  height: auto;          /* Keeps proportions natural */
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;   /* Prevents distortion */
+  transition: transform 0.3s ease, opacity 0.6s ease;
+  animation: fadeIn 1.4s ease-in-out;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Gentle zoom effect */
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== MAIN LOGIN CONTAINER ===== */
+.login-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.login-box {
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 100%; 
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;      /* Ensures it's centered */
+  letter-spacing: 0.5px;   /* Slight spacing for elegance */
+}
+
+
+/* ----FORM  STYLES----*/
+form {
+  display: flex;
+  flex-direction: column;  /* Stacks fields vertically */
+  gap: 1rem;               /* Adds equal spacing between fields */
+  margin-bottom: 1.5rem;   /* Space before the extra links */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #1c1c1c;
+}
+
+label {
+  font-size: 0.9rem;       /* Slightly smaller than normal text */
+  margin-bottom: 0.4rem;   /* Gap between label and input */
+}
+
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.7rem;                     /* Inner space inside input */
+  border: 1px solid #444;              /* Subtle border to outline input */
+  border-radius: 8px;                  /* Smooth edges */
+  background-color: #585858;              /* Dark field to match theme */
+  color: #f1f1f1;                      /* Light text */
+  font-size: 1rem;                     /* Legible text size */
+  transition: border-color 0.2s;       /* Smooth border animation when focused */
+}
+
+input:focus {
+  border-color: #5b8cff;               /* Highlight input on focus */
+  box-shadow: 0 0 4px rgba(91, 140, 255, 0.4);
+  outline: none;                       /* Removes default blue outline */
+}
+
+input:hover {
+  border-color: #6f9cff;
+}
+
+::placeholder {
+  color: #bbb;
+  opacity: 1;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.forgot-password {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #5b8cff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: #3b6fe8;
+}
+
+/* ------------------------------
+   BUTTON STYLE
+--------------------------------*/
+button {
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #5b8cff, #3b6fe8); /* Gradient button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;                     /* Pointer cursor to show clickability */
+  transition: opacity 0.3s ease;       /* Smooth hover effect */
+}
+
+button:hover {
+  opacity: 0.85;                       /* Slight fade on hover */
+}
+
+/* ------------------------------
+   EXTRA LINKS SECTION
+--------------------------------*/
+.extra-links {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.extra-links a {
+  color: #5b8cff;                      /* Blue links for visibility */
+  text-decoration: none;               /* Removes underline */
+}
+
+.extra-links a:hover {
+  text-decoration: underline;          /* Adds underline on hover */
+}
+
+footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+@media (max-width: 480px) {
+  .login-box {
+    padding: 1.5rem;                   /* Reduces padding on small screens */
+  }
+}

@@ -152,8 +152,8 @@ label {
   margin-bottom: 0.4rem;   /* Gap between label and input */
 }
 
-
 input[type="text"],
+input[type="email"],
 input[type="password"] {
   padding: 0.7rem;                     /* Inner space inside input */
   border: 1px solid #444;              /* Subtle border to outline input */

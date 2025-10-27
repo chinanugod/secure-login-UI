@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Create Account 🧑‍💻 Codecrackles</title>
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/codecrackles-transparent.png"
+        alt="Codecrackles Logo"
+        class="logo"
+      />
+    </header>
+
+    <main class="login-wrapper">
+      <div class="login-box">
+        <h1>Create your CodeCrackles account</h1>
+
+        <form id="registerForm" method="post" action="/register" novalidate>
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+              id="fullname"
+              name="fullname"
+              type="text"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Create a strong password"
+              required
+              minlength="8"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+
+          <button type="submit">Sign up</button>
+
+          <div class="extra-links">
+            <p>
+              Already have an account?
+              <a href="index.html"><strong>Login</strong></a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright © 2025 - Chinanu Nwaohangwa @ Codecrackles</p>
+      <small
+        >The crunch place for developers mending the cracks with every line of
+        code.</small
+      >
+    </footer>
+
+    <script src="scripts.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/codecrackles-transparent.png"
+        class="logo"
+        alt="CodeCrackles Logo"
+      />
+    </header>
+
+    <main id="dashboard">
+      <h1>Welcome to your Dashboard</h1>
+      <div id="userInfo"></div>
+      <button id="logoutBtn">Logout</button>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // ✅ Always read the same key used during login
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+        if (!user) {
+          alert("Not logged in. Redirecting to login page...");
+          window.location.href = "index.html";
+          return;
+        }
+
+        // ✅ Show user info
+        const userInfo = document.getElementById("userInfo");
+        userInfo.innerHTML = `
+          <p>Hello, <strong>${user.fullname}</strong></p>
+          <p>You are logged in locally 🎉</p>
+        `;
+
+        // ✅ Handle logout
+        const logoutBtn = document.getElementById("logoutBtn");
+        logoutBtn.addEventListener("click", () => {
+          localStorage.removeItem("loggedInUser");
+          alert("You have been logged out!");
+          window.location.href = "index.html";
+        });
+      });
+    </script>
+  </body>
+</html>

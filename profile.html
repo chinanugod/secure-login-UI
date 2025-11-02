@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css"
+  </head>
+  <body>
+    <div class="profile-container">
+      <h2>My Profile</h2>
+      <img
+        id="profile-pic"
+        src="default-avatar.png"
+        alt="Profile Picture"
+        width="100"
+      />
+      <input type="file" id="upload-pic" accept="images/*" />
+
+      <form id="profile-form">
+        <input type="text" id="bio" placeholder="Short bio" />
+        <input
+          type="text"
+          id="techstacks"
+          placeholder="Tech stacks (e.g., HTML, JS, Java, C++, PHP)"
+        />
+        <input
+          type="text"
+          id="level"
+          placeholder="Level (e.g., Beginner, Intermediate)"
+        />
+        <input type="text" id="interests" placeholder="Your interests" />
+        <button type="submit">Save Profile</button>
+      </form>
+    </div>
+
+    <script src="profile.js"></script>
+  </body>
+</html>

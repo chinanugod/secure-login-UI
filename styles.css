@@ -264,6 +264,23 @@ body.loaded .login-wrapper {
   opacity: 1;
 }
 
+.profile-container {
+  width: 350px;
+  margin: 50px auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+.profile-container input, button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+
+
 /* ------------------------------
    RESPONSIVE DESIGN
 --------------------------------*/

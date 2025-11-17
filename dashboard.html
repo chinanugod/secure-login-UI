@@ -21,32 +21,33 @@
       <button id="logoutBtn">Logout</button>
     </main>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // ✅ Always read the same key used during login
-        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+<script src="scripts.js" defer></script>
+<script src="auth-local.js" defer></script>
+<!-- dashboard script below -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Read logged-in user from localStorage
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
-        if (!user) {
-          alert("Not logged in. Redirecting to login page...");
-          window.location.href = "index.html";
-          return;
-        }
+  // If no user found → redirect to login
+  if (!user) {
+    window.location.href = "index.html";
+    return;
+  }
 
-        // ✅ Show user info
-        const userInfo = document.getElementById("userInfo");
-        userInfo.innerHTML = `
-          <p>Hello, <strong>${user.fullname}</strong></p>
-          <p>You are logged in locally 🎉</p>
-        `;
+  // Show user info
+  const userInfo = document.getElementById("userInfo");
+  userInfo.innerHTML = `
+    <p>Hello, <strong>${user.fullname}</strong> (${user.email})</p>
+  `;
 
-        // ✅ Handle logout
-        const logoutBtn = document.getElementById("logoutBtn");
-        logoutBtn.addEventListener("click", () => {
-          localStorage.removeItem("loggedInUser");
-          alert("You have been logged out!");
-          window.location.href = "index.html";
-        });
-      });
-    </script>
+  // Logout button
+  document.getElementById("logoutBtn").addEventListener("click", () => {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "index.html";
+  });
+});
+</script>
+
   </body>
 </html>

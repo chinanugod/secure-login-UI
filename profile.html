@@ -3,34 +3,84 @@
   <head>
     <meta charset="utf-8" />
     <title>User Profile</title>
-    <link rel="stylesheet" href="styles.css"
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="profile-container">
       <h2>My Profile</h2>
+
       <img
         id="profile-pic"
         src="default-avatar.png"
         alt="Profile Picture"
-        width="100"
+        width="120"
       />
-      <input type="file" id="upload-pic" accept="images/*" />
+      <br />
+      <input type="file" id="upload-pic" accept="image/*" />
 
       <form id="profile-form">
-        <input type="text" id="bio" placeholder="Short bio" />
+        <!-- BIO -->
+        <label>Bio</label>
+        <textarea
+          id="bio"
+          rows="4"
+          placeholder="Tell us about yourself"
+        ></textarea>
+
+        <!-- TECH STACK -->
+        <label>Tech Stacks</label>
+        <details>
+          <summary>Select Tech Stacks</summary>
+          <label><input type="checkbox" value="HTML" /> HTML</label>
+          <label><input type="checkbox" value="CSS" /> CSS</label>
+          <label><input type="checkbox" value="JavaScript" /> JavaScript</label>
+          <label><input type="checkbox" value="Python" /> Python</label>
+          <label><input type="checkbox" value="Java" /> Java</label>
+          <label><input type="checkbox" value="C++" /> C++</label>
+          <label><input type="checkbox" value="Ruby" /> Ruby</label>
+          <label><input type="checkbox" value="Go" /> Go</label>
+          <label><input type="checkbox" value="PHP" /> PHP</label>
+          <label><input type="checkbox" value="SQL" /> SQL</label>
+          <label><input type="checkbox" value="NoSQL" /> NoSQL</label>
+          <label><input type="checkbox" value="DevOps" /> DevOps</label>
+          <label><input type="checkbox" value="Mobile Dev" /> Mobile Dev</label>
+          <label
+            ><input type="checkbox" value="Data Science" /> Data Science</label
+          >
+          <label><input type="checkbox" value="AI/ML" /> AI/ML</label>
+          <label
+            ><input type="checkbox" value="Cybersecurity" />
+            Cybersecurity</label
+          >
+          <label
+            ><input type="checkbox" value="Cloud Computing" /> Cloud
+            Computing</label
+          >
+          <label><input type="checkbox" value="Other" /> Other</label>
+        </details>
+
+        <!-- LEVEL -->
+        <label>Level</label>
+        <select id="level">
+          <option value="">Select level</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <!-- INTERESTS -->
+        <label>Interests</label>
         <input
           type="text"
-          id="techstacks"
-          placeholder="Tech stacks (e.g., HTML, JS, Java, C++, PHP)"
+          id="interests"
+          placeholder="Web dev, cybersecurity, AI..."
         />
-        <input
-          type="text"
-          id="level"
-          placeholder="Level (e.g., Beginner, Intermediate)"
-        />
-        <input type="text" id="interests" placeholder="Your interests" />
+
         <button type="submit">Save Profile</button>
       </form>
+
+      <br />
+      <a href="dashboard.html">← Back to Dashboard</a>
     </div>
 
     <script src="profile.js"></script>

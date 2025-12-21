@@ -1,41 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const username = localStorage.getItem('loggedInUser');
-  if (!username) {
-    alert('Not logged in. Redirecting...');
-    window.location.href = 'login.html';
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+  if (!user) {
+    alert("Not logged in. Redirecting to login...");
+    window.location.href = "index.html";
+    return;
   }
 
-  const userData = JSON.parse(localStorage.getItem(username)) || {};
-  
-  // Prefill fields
-  document.getElementById('bio').value = userData.bio || '';
-  document.getElementById('techStacks').value = userData.techStacks || '';
-  document.getElementById('level').value = userData.level || '';
-  document.getElementById('interests').value = userData.interests || '';
-  document.getElementById('profile-pic').src = userData.profilePic || 'default-avatar.png';
+  // ===== PREFILL FIELDS =====
+  document.getElementById("bio").value = user.bio || "";
+  document.getElementById("level").value = user.level || "";
+  document.getElementById("interests").value = user.interests || "";
 
-  // Save profile
-  document.getElementById('profile-form').addEventListener('submit', e => {
+  // Restore profile picture
+  if (user.profilePic) {
+    document.getElementById("profile-pic").src = user.profilePic;
+  }
+
+  // Restore checked tech stacks
+  const checkboxes = document.querySelectorAll(
+    'details input[type="checkbox"]'
+  );
+
+  if (Array.isArray(user.techStacks)) {
+    checkboxes.forEach((cb) => {
+      if (user.techStacks.includes(cb.value)) {
+        cb.checked = true;
+      }
+    });
+  }
+
+  // ===== SAVE PROFILE =====
+  document.getElementById("profile-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    userData.bio = document.getElementById('bio').value;
-    userData.techStacks = document.getElementById('techStacks').value;
-    userData.level = document.getElementById('level').value;
-    userData.interests = document.getElementById('interests').value;
-    localStorage.setItem(username, JSON.stringify(userData));
-    alert('Profile saved!');
+
+    // Collect checked tech stacks
+    const selectedStacks = [];
+    checkboxes.forEach((cb) => {
+      if (cb.checked) selectedStacks.push(cb.value);
+    });
+
+    user.bio = document.getElementById("bio").value.trim();
+    user.level = document.getElementById("level").value;
+    user.interests = document.getElementById("interests").value.trim();
+    user.techStacks = selectedStacks;
+
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+    alert("Profile saved successfully!");
   });
 
-  // Upload picture
-  document.getElementById('upload-pic').addEventListener('change', e => {
+  // ===== UPLOAD PROFILE PICTURE =====
+  document.getElementById("upload-pic").addEventListener("change", (e) => {
     const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(evt) {
-        document.getElementById('profile-pic').src = evt.target.result;
-        userData.profilePic = evt.target.result;
-        localStorage.setItem(username, JSON.stringify(userData));
-      };
-      reader.readAsDataURL(file);
-    }
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      user.profilePic = reader.result;
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
+      document.getElementById("profile-pic").src = reader.result;
+    };
+    reader.readAsDataURL(file);
   });
 });

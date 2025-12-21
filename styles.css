@@ -264,28 +264,127 @@ body.loaded .login-wrapper {
   opacity: 1;
 }
 
+/* =========================
+   PROFILE PAGE STYLES
+========================= */
+
 .profile-container {
-  width: 350px;
-  margin: 50px auto;
-  text-align: center;
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #0f172a; /* dark slate */
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  color: #e5e7eb;
 }
-.profile-container input, button {
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+/* Profile Image */
+#profile-pic {
   display: block;
-  width: 90%;
-  margin: 10px auto;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  object-fit: cover;
+}
+
+#upload-pic {
+  display: block;
+  margin: 0 auto 25px;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+/* Form layout */
+#profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#profile-form label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Inputs */
+#profile-form input,
+#profile-form textarea,
+#profile-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+#profile-form textarea {
+  resize: vertical;
+}
+
+/* Tech stack dropdown */
+details {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 8px;
   padding: 10px;
 }
 
+details summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
 
+details label {
+  display: block;
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
 
-/* ------------------------------
-   RESPONSIVE DESIGN
---------------------------------*/
+/* Save button */
+#profile-form button {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+#profile-form button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Back link */
+.profile-container a {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.profile-container a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
 @media (max-width: 480px) {
-  .login-box {
-    padding: 1.5rem;                   /* Reduces padding on small screens */
+  .profile-container {
+    margin: 30px 15px;
+    padding: 22px;
   }
 }

@@ -15,39 +15,58 @@
     </header>
 
     <main id="dashboard">
-      <h1>Welcome to your Dashboard</h1
+      <section class="profile-summary">
+        <img id="dash-avatar" src="default-avatar.png" alt="Profile picture" />
+        <div>
+          <h2 id="dash-name">Welcome</h2>
+          <p id="dash-stacks"></p>
+          <a href="profile.html">Edit Profile</a>
+        </div>
+      </section>
+
+      <h1>Welcome to your Dashboard</h1>
       <div id="userInfo"></div>
       <a href="profile.html">Go to Profile</a>
       <button id="logoutBtn">Logout</button>
     </main>
 
-<script src="scripts.js" defer></script>
-<script src="auth-local.js" defer></script>
-<!-- dashboard script below -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Read logged-in user from localStorage
-  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
-  // If no user found → redirect to login
-  if (!user) {
-    window.location.href = "index.html";
-    return;
-  }
+        if (!user) {
+          window.location.href = "index.html";
+          return;
+        }
 
-  // Show user info
-  const userInfo = document.getElementById("userInfo");
-  userInfo.innerHTML = `
-    <p>Hello, <strong>${user.fullname}</strong> (${user.email})</p>
-  `;
+        // Profile elements
+        const nameEl = document.getElementById("dash-name");
+        const avatarEl = document.getElementById("dash-avatar");
+        const stacksEl = document.getElementById("dash-stacks");
 
-  // Logout button
-  document.getElementById("logoutBtn").addEventListener("click", () => {
-    localStorage.removeItem("loggedInUser");
-    window.location.href = "index.html";
-  });
-});
-</script>
+        nameEl.textContent = `Welcome, ${user.fullname}`;
 
+        // Load profile info (if exists)
+        const profile =
+          JSON.parse(localStorage.getItem("profile_" + user.email)) || {};
+
+        if (profile.profilePic) {
+          avatarEl.src = profile.profilePic;
+        }
+
+        if (profile.techStacks && profile.techStacks.length) {
+          stacksEl.textContent =
+            "Tech stacks: " + profile.techStacks.slice(0, 4).join(", ");
+        } else {
+          stacksEl.textContent = "No tech stacks added yet.";
+        }
+
+        // Logout
+        document.getElementById("logoutBtn").addEventListener("click", () => {
+          localStorage.removeItem("loggedInUser");
+          window.location.href = "index.html";
+        });
+      });
+    </script>
   </body>
 </html>

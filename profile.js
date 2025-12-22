@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const user = JSON.parse(localStorage.getItem("loggedInUser"));
-
+const user = JSON.parse(localStorage.getItem("loggedInUser"));
+localStorage.setItem(
+  "profile_" + user.email,
+  JSON.stringify(userData)
+);
+  
   if (!user) {
     alert("Not logged in. Redirecting to login...");
     window.location.href = "index.html";

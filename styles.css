@@ -381,6 +381,46 @@ details label {
   text-decoration: underline;
 }
 
+/* =========================
+   DASHBOARD PROFILE SUMMARY
+========================= */
+
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #020617;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.profile-summary img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #38bdf8;
+}
+
+.profile-summary h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.profile-summary p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.profile-summary a {
+  font-size: 0.8rem;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+
 /* Mobile */
 @media (max-width: 480px) {
   .profile-container {

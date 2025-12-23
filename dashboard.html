@@ -12,6 +12,16 @@
         class="logo"
         alt="CodeCrackles Logo"
       />
+      <nav class="menu">
+        <div class="menu-trigger">☰ Menu</div>
+
+        <div class="menu-dropdown" id="menuDropdown">
+          <a href="dashboard.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="quiz.html">Quiz</a>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </nav>
     </header>
 
     <main id="dashboard">
@@ -57,6 +67,22 @@
         } else {
           stacksEl.textContent = "No tech stacks added yet.";
         }
+
+        // ===== MENU TOGGLE =====
+        const menuTrigger = document.querySelector(".menu-trigger");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        menuTrigger.addEventListener("click", () => {
+          menuDropdown.style.display =
+            menuDropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest(".menu")) {
+            menuDropdown.style.display = "none";
+          }
+        });
 
         // Logout
         document.getElementById("logoutBtn").addEventListener("click", () => {

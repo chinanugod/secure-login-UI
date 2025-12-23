@@ -393,6 +393,8 @@ details label {
   padding: 18px;
   border-radius: 12px;
   margin-bottom: 25px;
+  margin-left: 36px;
+  margin-right: 36px;
 }
 
 .profile-summary img {
@@ -403,9 +405,10 @@ details label {
   border: 2px solid #38bdf8;
 }
 
-.profile-summary h2 {
+.profile-summary h1 {
   margin: 0;
   font-size: 1.2rem;
+  color: #e0e7ff;
 }
 
 .profile-summary p {
@@ -418,6 +421,52 @@ details label {
   font-size: 0.8rem;
   color: #38bdf8;
   text-decoration: none;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.menu-trigger {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 12px;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.menu-dropdown a,
+.menu-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: center;
+  border: none;
+  background: #111;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-dropdown a:hover,
+.menu-dropdown button:hover {
+  background: #f0f0f0;
 }
 
 

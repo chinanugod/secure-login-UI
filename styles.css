@@ -469,6 +469,64 @@ details label {
   background: #f0f0f0;
 }
 
+/* =========================
+   DISCLAIMER MODAL
+========================= */
+
+.disclaimer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.disclaimer-box {
+  background: #ffffff;
+  color: #222;
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  font-size: 0.95rem;
+}
+
+.disclaimer-box h2 {
+  margin-bottom: 0.8rem;
+}
+
+.disclaimer-box p {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.disclaimer-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.disclaimer-actions button {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.disclaimer-actions .secondary {
+  background: #ccc;
+  color: #222;
+}
+
+.hidden {
+  display: none;
+}
 
 /* Mobile */
 @media (max-width: 480px) {

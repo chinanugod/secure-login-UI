@@ -11,3 +11,28 @@ window.addEventListener("load", () => {
   }, 2500); // show splash for 2.5s
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("disclaimer-overlay");
+  const acceptBtn = document.getElementById("acceptDisclaimer");
+  const closeBtn = document.getElementById("closeDisclaimer");
+
+  if (!overlay) return;
+
+  const accepted = localStorage.getItem("cc_disclaimer_accepted");
+
+  // Show disclaimer after 2 seconds if not accepted
+  if (!accepted) {
+    setTimeout(() => {
+      overlay.classList.remove("hidden");
+    }, 2000);
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cc_disclaimer_accepted", "yes");
+    overlay.classList.add("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+  });
+});

@@ -66,18 +66,3 @@ document.addEventListener("DOMContentLoaded", () => {
     reader.readAsDataURL(file);
   });
 });
-
-
- 
-// implement delete profile/account within the menu dropdown;  create a popup 
-// Disclaimer where visitor can accept the state of 
-// the site - then with  the disclaimer that "This is
-//  just a porfolio project. At this stage do not use 
-//  your real email and password, formulate anything@email.com
-//   during signup in order to review this project - 
-//   this site is for (idea, MVP, demo) testing. Your 
-//   opinions are welcome". this will help wave any 
-//   security concern with .php site. this pops up 2000 
-//   seconds after loading the login page and the user 
-//   reads and accepts or close (button) before 
-//   continueing to login; 

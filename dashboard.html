@@ -45,27 +45,25 @@
           return;
         }
 
-        // Profile elements
-        const nameEl = document.getElementById("dash-name");
-        const avatarEl = document.getElementById("dash-avatar");
-        const stacksEl = document.getElementById("dash-stacks");
+        const profileKey = "profile_" + user.email;
+        const profile = JSON.parse(localStorage.getItem(profileKey)) || {};
 
-        nameEl.textContent = `Welcome, ${user.fullname}`;
+        document.getElementById(
+          "dash-name"
+        ).textContent = `Welcome, ${user.fullname}`;
 
-        // Load profile info (if exists)
-        // const profile =
-        //   JSON.parse(localStorage.getItem("profile_" + user.email)) || {};
+        const avatar = document.getElementById("dash-avatar");
+        const stacks = document.getElementById("dash-stacks");
 
-        // Load profile info directly from loggedInUser
-        if (user.profilePic) {
-          avatarEl.src = user.profilePic;
+        if (profile.profilePic) {
+          avatar.src = profile.profilePic;
         }
 
-        if (user.techStacks && user.techStacks.length) {
-          stacksEl.textContent =
-            "Tech Stacks: " + user.techStacks.slice(0, 4).join(", ");
+        if (profile.techStacks && profile.techStacks.length) {
+          stacks.textContent =
+            "Tech stacks: " + profile.techStacks.slice(0, 4).join(", ");
         } else {
-          stacksEl.textContent = "No tech stacks added yet.";
+          stacks.textContent = "No tech stacks added yet.";
         }
 
         // ===== MENU TOGGLE =====
@@ -84,7 +82,6 @@
           }
         });
 
-        // Logout
         document.getElementById("logoutBtn").addEventListener("click", () => {
           localStorage.removeItem("loggedInUser");
           window.location.href = "index.html";

@@ -68,9 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// TODOs:
-
-// remove password after login;  create a popup 
+ 
+// implement delete profile/account within the menu dropdown;  create a popup 
 // Disclaimer where visitor can accept the state of 
 // the site - then with  the disclaimer that "This is
 //  just a porfolio project. At this stage do not use 
@@ -81,4 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
 //   security concern with .php site. this pops up 2000 
 //   seconds after loading the login page and the user 
 //   reads and accepts or close (button) before 
-//   continueing to login.
+//   continueing to login; 

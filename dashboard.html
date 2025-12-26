@@ -41,7 +41,11 @@
           <a href="profile.html">Edit Profile</a>
         </div>
       </section>
-      <!-- <button id="logoutBtn">Logout</button> -->
+       <div class="quiz-summary">
+  <h2>Quiz Performance</h2>
+  <p id="quizScoreText">No quiz taken yet</p>
+</div>
+
     </main>
 
     <script>
@@ -74,21 +78,14 @@
           stacks.textContent = "No tech stacks added yet.";
         }
 
-        // // ===== MENU TOGGLE =====
-        // const menuTrigger = document.querySelector(".menu-trigger");
-        // const menuDropdown = document.getElementById("menuDropdown");
+        // Quiz score display
+const quizText = document.getElementById("quizScoreText");
 
-        // menuTrigger.addEventListener("click", () => {
-        //   menuDropdown.style.display =
-        //     menuDropdown.style.display === "block" ? "none" : "block";
-        // });
-
-        // // Close menu when clicking outside
-        // document.addEventListener("click", (e) => {
-        //   if (!e.target.closest(".menu")) {
-        //     menuDropdown.style.display = "none";
-        //   }
-        // });
+if (user.quizScore !== undefined) {
+  quizText.textContent = `Last score: ${user.quizScore}/50 (${user.lastQuizDate})`;
+} else {
+  quizText.textContent = "You haven’t taken a quiz yet.";
+}
 
         document.getElementById("logoutBtn").addEventListener("click", () => {
           localStorage.removeItem("loggedInUser");

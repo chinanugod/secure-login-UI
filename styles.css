@@ -650,6 +650,34 @@ details label {
 }
 
 /* ============================
+   QUIZ RESULT STYLES
+============================ */
+.quiz-summary {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#quizScoreText {
+  font-size: 0.9rem;
+  color: #0ea5e9;
+  font-weight: bold;
+}
+
+.quiz-result {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.quiz-result h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.quiz-result p {
+  font-size: 1.1rem;
+}
+
+/* ============================
    MOBILE FRIENDLY
 ============================ */
 

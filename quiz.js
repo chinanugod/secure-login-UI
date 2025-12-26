@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ===== STATE =====
   let currentQuestionIndex = 0;
+  let score = 0;
   const userAnswers = new Array(quizData.length).fill(null);
 
   // ===== ELEMENTS =====
@@ -60,6 +61,28 @@ document.addEventListener("DOMContentLoaded", () => {
         ? "Submit"
         : "Next";
   }
+
+  function finishQuiz() {
+  const loggedUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  if (!loggedUser) return;
+
+  // Update score on user object
+  loggedUser.quizScore = score;
+  loggedUser.lastQuizDate = new Date().toLocaleDateString();
+
+  // Update users array
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const updatedUsers = users.map((u) =>
+    u.email === loggedUser.email ? loggedUser : u
+  );
+
+  localStorage.setItem("users", JSON.stringify(updatedUsers));
+  localStorage.setItem("loggedInUser", JSON.stringify(loggedUser));
+
+  // Redirect
+  window.location.href = "dashboard.html";
+}
+
 
   // ===== NAVIGATION =====
   prevBtn.addEventListener("click", () => {

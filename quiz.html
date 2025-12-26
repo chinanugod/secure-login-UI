@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz | CodeCrackles</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+        <img
+        src="images/codecrackles-transparent.png"
+        class="logo"
+        alt="CodeCrackles Logo"
+      />
+      <div class="menu-container">
+  <button id="menuToggle" class="menu-btn">☰</button>
+
+  <div id="menuDropdown" class="menu-dropdown hidden">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="quiz.html">Quiz</a>
+    <hr />
+    <a href="blog.html" class="coming-soon"><strong>Blog</strong>(Coming Soon)</a>
+  <hr />
+        <a href="courses.html" class="coming-soon"><strong>Courses</strong>(Coming Soon)</a>
+        <hr />  
+        <a href="interview-prep.html" class="coming-soon"><strong>Interview Prep</strong>(Coming Soon)</a>
+    <hr />
+            <button id="menuLogout">Logout</button>
+  </div>
+    </header>
+
+    <main class="quiz-container">
+      <!-- QUIZ HEADER -->
+      <div class="quiz-header">
+        <h1 id="quiz-title">JavaScript Basics Quiz</h1>
+        <p id="quiz-progress">Question 1 of 20</p>
+      </div>
+
+      <!-- QUESTION CARD -->
+      <div class="quiz-card">
+        <h2 id="question-text">What does JavaScript primarily run on?</h2>
+
+        <form id="options-form">
+          <label class="option">
+            <input type="radio" name="option" value="0" />
+            <span>Server only</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="option" value="1" />
+            <span>Browser</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="option" value="2" />
+            <span>Database</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="option" value="3" />
+            <span>Operating system</span>
+          </label>
+        </form>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div class="quiz-navigation">
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </main>
+
+    <script src="quiz-data.js"></script>
+    <script src="quiz.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

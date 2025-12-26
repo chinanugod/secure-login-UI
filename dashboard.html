@@ -68,21 +68,21 @@
           stacks.textContent = "No tech stacks added yet.";
         }
 
-        // ===== MENU TOGGLE =====
-        const menuTrigger = document.querySelector(".menu-trigger");
-        const menuDropdown = document.getElementById("menuDropdown");
+        // // ===== MENU TOGGLE =====
+        // const menuTrigger = document.querySelector(".menu-trigger");
+        // const menuDropdown = document.getElementById("menuDropdown");
 
-        menuTrigger.addEventListener("click", () => {
-          menuDropdown.style.display =
-            menuDropdown.style.display === "block" ? "none" : "block";
-        });
+        // menuTrigger.addEventListener("click", () => {
+        //   menuDropdown.style.display =
+        //     menuDropdown.style.display === "block" ? "none" : "block";
+        // });
 
-        // Close menu when clicking outside
-        document.addEventListener("click", (e) => {
-          if (!e.target.closest(".menu")) {
-            menuDropdown.style.display = "none";
-          }
-        });
+        // // Close menu when clicking outside
+        // document.addEventListener("click", (e) => {
+        //   if (!e.target.closest(".menu")) {
+        //     menuDropdown.style.display = "none";
+        //   }
+        // });
 
         document.getElementById("logoutBtn").addEventListener("click", () => {
           localStorage.removeItem("loggedInUser");

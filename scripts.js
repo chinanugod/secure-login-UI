@@ -36,3 +36,30 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.add("hidden");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menuToggle");
+  const dropdown = document.getElementById("menuDropdown");
+  const logoutBtn = document.getElementById("menuLogout");
+
+  if (!toggle || !dropdown) return;
+
+  toggle.addEventListener("click", () => {
+    dropdown.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-container")) {
+      dropdown.classList.add("hidden");
+    }
+  });
+
+  // Logout
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "index.html";
+    });
+  }
+});

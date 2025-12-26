@@ -423,51 +423,64 @@ details label {
   text-decoration: none;
 }
 
-.menu {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
+/* =========================
+   GLOBAL DROPDOWN MENU
+========================= */
+
+.menu-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9000;
 }
 
-.menu-trigger {
+.menu-btn {
+  font-size: 1.4rem;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  font-weight: bold;
-  padding: 8px 12px;
-  background: #111;
-  color: #fff;
-  border-radius: 6px;
+  color: #333;
 }
 
 .menu-dropdown {
-  display: none;
   position: absolute;
   right: 0;
-  top: 45px;
+  margin-top: 8px;
   background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   min-width: 160px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-  z-index: 1000;
+  overflow: hidden;
 }
 
 .menu-dropdown a,
 .menu-dropdown button {
   display: block;
   width: 100%;
-  padding: 10px 14px;
-  text-align: center;
+  padding: 0.7rem 1rem;
+  text-align: left;
   border: none;
-  background: #111;
+  background: none;
   cursor: pointer;
-  font-size: 14px;
   text-decoration: none;
-  color: #fff;
+  color: #222;
+  font-size: 0.9rem;
 }
 
 .menu-dropdown a:hover,
 .menu-dropdown button:hover {
   background: #f0f0f0;
 }
+
+.menu-dropdown hr {
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
 
 /* =========================
    DISCLAIMER MODAL

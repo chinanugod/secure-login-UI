@@ -12,16 +12,18 @@
         class="logo"
         alt="CodeCrackles Logo"
       />
-      <nav class="menu">
-        <div class="menu-trigger">☰ Menu</div>
+            <!-- Global Menu -->
+<div class="menu-container">
+  <button id="menuToggle" class="menu-btn">☰</button>
 
-        <div class="menu-dropdown" id="menuDropdown">
-          <a href="dashboard.html">Home</a>
-          <a href="profile.html">Profile</a>
-          <a href="quiz.html">Quiz</a>
-          <button id="logoutBtn">Logout</button>
-        </div>
-      </nav>
+  <div id="menuDropdown" class="menu-dropdown hidden">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="blog.html">Blog<strong>(Coming Soon)</strong></a>
+    <hr />
+    <button id="menuLogout">Logout</button>
+  </div>
     </header>
 
     <main id="dashboard">
@@ -88,5 +90,6 @@
         });
       });
     </script>
+    <script src="scripts.js"></script>
   </body>
 </html>

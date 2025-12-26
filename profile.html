@@ -6,6 +6,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>
+      <img
+        src="images/codecrackles-transparent.png"
+        class="logo"
+        alt="CodeCrackles Logo"
+      />
+      <!-- Global Menu -->
+      <div class="menu-container">
+        <button id="menuToggle" class="menu-btn">☰</button>
+
+        <div id="menuDropdown" class="menu-dropdown hidden">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html">Profile</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="blog.html">Blog<strong>(Coming Soon)</strong></a>
+          <hr />
+          <button id="menuLogout">Logout</button>
+        </div>
+      </div>
+    </header>
+
     <div class="profile-container">
       <h2>My Profile</h2>
 
@@ -84,5 +105,6 @@
     </div>
 
     <script src="profile.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>

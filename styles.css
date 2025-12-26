@@ -481,6 +481,11 @@ details label {
   display: none;
 }
 
+.coming-soon {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 
 /* =========================
    DISCLAIMER MODAL

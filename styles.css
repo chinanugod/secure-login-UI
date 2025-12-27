@@ -22,6 +22,18 @@ header {
     padding: 1rem;
 }
 
+footer {
+  background-color: #666;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .logo {
   width: 180px;          /* Adjust this value to suit your layout */
   height: auto;          /* Keeps proportions natural */
@@ -198,15 +210,6 @@ button:hover {
 
 .extra-links a:hover {
   text-decoration: underline;          /* Adds underline on hover */
-}
-
-footer {
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  padding: 0.8rem;
-  font-size: 1rem;
-  color: #666;
 }
 
 /* ===============================

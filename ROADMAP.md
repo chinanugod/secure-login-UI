@@ -1,70 +1,94 @@
+---
+
+## ✅ UPDATED `ROADMAP.md`
+
+```md
 # 🧭 CodeCrackles Roadmap
 
-**Project Purpose:**  
-CodeCrackles is a developer community hub where learning, practice, and interaction blend — from login to coding challenges, profile visibility, and gamified brag rights.
+**Project Purpose**  
+CodeCrackles is a learning-driven developer platform for practicing authentication flows, profile management, quizzes, and interactive UI patterns. Over time, it will evolve into a community-based coding hub where developers can share knowledge and collaborate.
 
 ---
 
-## ✅ Phase 1: Foundation (Completed / Ongoing)
+## ✅ Phase 1: Foundation (Completed)
 
-- [x] Setup project structure (HTML, CSS)
-- [x] Create `index.html` login interface
-- [x] Build `register.html` with matching design
-- [x] Implement splash screen with fade-in/out
-- [x] Fix visibility issue after splash load
-- [x] Add consistent style across all pages
-- [x] Commit and push incremental fixes
-
----
-
-## 🚀 Phase 2: Authentication & Profile
-
-- [ ] Integrate sign-up and login logic (local & server-side ready)
-- [ ] Add `Profile` page for registered users
-  - [ ] Include user info: bio, tech stacks, level, interests
-  - [ ] Allow users to upload a profile picture
-- [ ] Add SSO (Single Sign-On) with GitHub, Google, and LinkedIn
-- [ ] Auto-track login sessions for personalized dashboard
+- [x] Project setup with HTML, CSS, and JavaScript
+- [x] Login (`index.html`) and signup (`register.html`)
+- [x] Splash screen with smooth transition
+- [x] Global styling and branding
+- [x] Navigation consistency across pages
+- [x] MVP deployment-ready structure
 
 ---
 
-## 🎮 Phase 3: Gamified Section (BragCode)
+## ✅ Phase 2: Authentication & Profile (Completed)
 
-- [ ] Introduce user-generated quizzes (question + hidden answer)
-- [ ] Enable score tracking and leaderboard
-- [ ] Display “Smartest Coder” and “Most Active User” monthly
-- [ ] Add brag badges and shareable highlights
-
----
-
-## 💬 Phase 4: Social & Interactive
-
-- [ ] Interview Prep Zone (dev Q&A resources)
-- [ ] Code Review Hub (screenshot upload + comments + reactions)
-- [ ] Follow4Follow system
-- [ ] Profile view stats and visibility meter
-- [ ] Social links: GitHub, LinkedIn, Medium
+- [x] Local authentication logic using `localStorage`
+- [x] Login session handling
+- [x] Logout functionality
+- [x] User profile page
+  - [x] Bio
+  - [x] Tech stack selection
+  - [x] Skill level
+  - [x] Interests
+  - [x] Profile picture upload
+- [x] Persistent user data storage (per user)
+- [x] Demo disclaimer for safe usage
 
 ---
 
-## 🧱 Phase 5: UX & Security Enhancements
+## ✅ Phase 3: Quiz Module (Completed)
 
-- [ ] Improve splash experience (only first load per session)
-- [ ] Add animations and subtle UI transitions
-- [ ] Apply secure form validation
-- [ ] Prepare for backend integration (Node.js or Firebase)
-- [ ] Implement session storage / token auth
-
----
-
-## 📅 Future Plans
-
-- [ ] Add “Community Feed” for user posts & code tips
-- [ ] Build API for BragCode leaderboard
-- [ ] Develop mobile-friendly layout
-- [ ] Launch Beta Testing for selected users
+- [x] Quiz interface (`quiz.html`)
+- [x] 50-question quiz data set
+- [x] Question navigation (Next / Previous)
+- [x] Progress indicator
+- [x] Score calculation
+- [x] Save quiz result to dashboard
+- [x] Display last quiz score with date
 
 ---
 
-**Maintained by:** Chinanu Nwaohangwa  
+## 🚧 Phase 4: UX & Interaction (In Progress)
+
+- [ ] Quiz categories (JS, HTML, CSS, etc.)
+- [ ] Improved quiz feedback (correct / wrong indicators)
+- [ ] Better mobile responsiveness
+- [ ] Subtle UI animations
+- [ ] Dashboard widgets expansion
+
+---
+
+## 🧩 Phase 5: Community & Content (Planned)
+
+- [ ] Blog section (Coming Soon)
+- [ ] Courses module (Coming Soon)
+- [ ] Interview preparation resources
+- [ ] Community discussion or feedback system
+- [ ] Optional comment system (demo-based)
+
+---
+
+## 🔐 Phase 6: Backend & Security (Future)
+
+- [ ] Backend authentication (Node.js / Firebase)
+- [ ] Secure password hashing
+- [ ] Token-based sessions
+- [ ] Database-backed user profiles
+- [ ] API-driven quiz and leaderboard system
+
+---
+
+## 📅 Long-Term Vision
+
+- [ ] Leaderboards and gamification
+- [ ] Public user profiles
+- [ ] Community feed
+- [ ] Mobile-first experience
+- [ ] Beta testing and feedback cycles
+
+---
+
+**Maintained by:**  
+Nwaohangwa Chinanu Godwin  
 © 2025 CodeCrackles. All rights reserved.

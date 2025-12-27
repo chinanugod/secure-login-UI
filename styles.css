@@ -16,22 +16,14 @@ body {
     min-height: 100vh;
 }
 
+main {
+    flex: 1;
+}
+
 /* ===== HEADER LOGO ===== */
 header {
     position: static;
     padding: 1rem;
-}
-
-footer {
-  background-color: #666;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  padding: 0.8rem;
-  font-size: 1rem;
-  color: #f1f1f1;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 .logo {
@@ -265,6 +257,15 @@ button:hover {
 
 body.loaded .login-wrapper {
   opacity: 1;
+}
+
+footer {
+  background-color: #333;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #f1f1f1;
 }
 
 /* =========================
@@ -686,24 +687,24 @@ details label {
   display: block;
   background-color: #cbd5f5;
   color: #020617;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border-radius: 10px;
 }
 
 .project-overview h3 {
   margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #3b6fe8;
 }
 
 .project-overview h4 {
   margin-bottom: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #3b6fe8;
 }
 
 .project-overview p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 

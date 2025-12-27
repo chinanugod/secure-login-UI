@@ -175,7 +175,7 @@ const quizData = [
       "Should use '==' for comparison",
       "Should use '===' for comparison",
       "Should use '!=' for comparison",
-      "Should use '!== for comparison",
+      "Should use '!==' for comparison",
     ],
     answer: 0,
   },

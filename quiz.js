@@ -60,29 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentQuestionIndex === quizData.length - 1
         ? "Submit"
         : "Next";
-  }
-
-  function finishQuiz() {
-  const loggedUser = JSON.parse(localStorage.getItem("loggedInUser"));
-  if (!loggedUser) return;
-
-  // Update score on user object
-  loggedUser.quizScore = score;
-  loggedUser.lastQuizDate = new Date().toLocaleDateString();
-
-  // Update users array
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  const updatedUsers = users.map((u) =>
-    u.email === loggedUser.email ? loggedUser : u
-  );
-
-  localStorage.setItem("users", JSON.stringify(updatedUsers));
-  localStorage.setItem("loggedInUser", JSON.stringify(loggedUser));
-
-  // Redirect
-  window.location.href = "dashboard.html";
-}
-
+  };
 
   // ===== NAVIGATION =====
   prevBtn.addEventListener("click", () => {
@@ -131,8 +109,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Optional redirect later
     // window.location.href = "dashboard.html";
+      function finishQuiz() {
+  const loggedUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  if (!loggedUser) return;
+
+  // Update score on user object
+  loggedUser.quizScore = score;
+  loggedUser.lastQuizDate = new Date().toLocaleDateString();
+
+  // Update users array
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const updatedUsers = users.map((u) =>
+    u.email === loggedUser.email ? loggedUser : u
+  );
+
+  localStorage.setItem("users", JSON.stringify(updatedUsers));
+  localStorage.setItem("loggedInUser", JSON.stringify(loggedUser));
+
+  // Redirect
+  window.location.href = "dashboard.html";
+};
+    finishQuiz();
+
   }
 
   // ===== INIT =====
   loadQuestion();
 });
+

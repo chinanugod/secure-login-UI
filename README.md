@@ -1,52 +1,127 @@
-🛡️ Secure Login UI
+# 🚀 CodeCrackles
 
-A minimal and security-conscious login interface built with HTML, CSS, and planned JavaScript logic for enhanced user authentication flow.
+**CodeCrackles** is a front-end–focused MVP project built to practice and showcase modern web development fundamentals — authentication flow, user profiles, dashboards, and interactive quizzes — using **HTML, CSS, and Vanilla JavaScript**.
 
-🚀 Overview
+This project is part of my continuous learning journey and portfolio.
 
-This project is part of a personal learning build toward front-end and web security mastery.
-The login page includes:
+---
 
-Branded interface (logo + layout)
+## 🧭 Project Overview
 
-Secure input fields (username/email + password)
+CodeCrackles currently provides:
 
-“Remember me” and “Forgot password” options
+- User authentication (signup & login)
+- Persistent user profiles
+- Dashboard with profile summary
+- Interactive quiz module (50 questions)
+- Score tracking per user
+- Global dropdown navigation
+- User disclaimer for safe demo testing
 
-Placeholder and accessibility attributes
+> ⚠️ **Important:** This is a demo / MVP project.  
+> Do **not** use real emails or passwords. Use dummy credentials only.
 
-Ready setup for future JS validation and API integration
+---
 
-📁 Structure
-secure-login-UI/
+## ✨ Current Features
+
+### 🔐 Authentication
+
+- Signup & login flow using browser `localStorage`
+- Session-based login state
+- Logout functionality
+- Demo disclaimer to inform users of storage limitations
+
+### 👤 User Profile
+
+- Bio (textarea)
+- Tech stack selection
+- Skill level
+- Interests
+- Profile picture upload
+- Persistent profile data (stored per user)
+
+### 📊 Dashboard
+
+- Welcome message
+- Profile summary
+- Display of selected tech stacks
+- Quiz record summary
+- Last quiz score with date
+
+### 🧠 Quiz Module
+
+- 50-question quiz
+- Question navigation (Previous / Next)
+- Progress indicator
+- Score calculation
+- Quiz result saved to user dashboard
+
+---
+
+## 🔐 Security Note (MVP Scope)
+
+All user data is stored in **browser localStorage** for simplicity.
+
+This approach is:
+
+- ✅ Suitable for demos and learning
+- ❌ Not secure for production use
+
+Users are advised to:
+
+- Use **dummy emails and passwords**
+- Treat the project as an **idea / MVP / demo**
+
+Future versions will introduce backend authentication and secure storage.
+
+---
+
+## 🛠️ Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser Local Storage (temporary persistence)
+
+---
+
+## 📁 Project Structure (Simplified)
+
+```txt
+codecrackles/
 │
-├── index.html # Main login page
-├── styles.css # UI styling and layout
-├── scripts.js # JS logic placeholder (for later use)
-└── images/ # Brand/logo assets
+├── index.html        # Login page
+├── register.html     # Signup page
+├── dashboard.html    # User dashboard
+├── profile.html      # Profile management
+├── quiz.html         # Quiz interface
+├── styles.css        # Global styles
+├── auth-local.js     # Authentication logic
+├── profile.js        # Profile logic
+├── quiz.js           # Quiz logic
+├── quiz-data.js      # Quiz questions
+└── images/           # Assets
 
-🧠 Planned Enhancements
+🚀 More Features Coming Soon
 
-Form validation and error prompts (JavaScript)
+Blog section
 
-Password strength meter
+Courses module
 
-Secure login simulation (dummy backend or API link)
+Interview preparation tools
 
-Responsive design for all devices
+Enhanced quiz categories
 
-Optional dark/light theme toggle
+Community interaction
 
-🧩 Author
+Secure backend authentication
 
-Chinanu Nwaohangwa
-GitHub: chinanugod
+👤 Author
 
-⚙️ How to Run
+Nwaohangwa Chinanu Godwin
+GitHub: https://github.com/chinanugod
 
-Just open index.html in any browser — no build setup required.
-To preview edits live, use VS Code Live Server or any simple HTTP server.
-
-📝 License
-
-This project is open for learning and personal improvement purposes.
+© 2025 CodeCrackles. All rights reserved.
+CodeCrackles is an evolving project focused on learning, UX flow, and interactive development.
+```
